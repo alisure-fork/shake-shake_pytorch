@@ -16,7 +16,7 @@ from models import ShakeResNet, ShakeResNeXt
 
 
 def main(args):
-    train_loader, test_loader = load_dataset(args.label, args.batch_size)
+    train_loader, test_loader = load_dataset(args.label, args.batch_size, root="/home/ubuntu/data1.5TB/cifar")
     if args.label == 10:
         model = ShakeResNet(args.depth, args.w_base, args.label)
     else:
